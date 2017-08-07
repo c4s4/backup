@@ -1,0 +1,9 @@
+# NeON build file (http://github.com/c4s4/neon)
+
+extends: c4s4/build/go-tool.yml
+default: run
+
+properties:
+  LIBRARIES:
+  - 'github.com/mitchellh/gox'
+  - 'github.com/mattn/go-zglob'
