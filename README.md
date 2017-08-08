@@ -38,4 +38,6 @@ $ backup
 
 This will list all files while copying them to the backup device.
 
+*In Memory of my Dad*
+
 *Enjoy!*
