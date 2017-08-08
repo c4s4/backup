@@ -7,3 +7,13 @@ properties:
   LIBRARIES:
   - 'github.com/mitchellh/gox'
   - 'github.com/mattn/go-zglob'
+  - 'github.com/udhos/equalfile'
+
+targets:
+
+  run:
+    doc: Run backup
+    depends: bin
+    steps:
+    - time:
+      - $: 'build/backup'
