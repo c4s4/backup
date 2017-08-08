@@ -79,10 +79,7 @@ func FindFiles(includes, excludes []string) ([]string, error) {
 		list, _ := zglob.Glob(include)
 		for _, file := range list {
 			stat, err := os.Stat(file)
-			if err != nil {
-				return nil, fmt.Errorf("stating file: %v", err)
-			}
-			if stat.Mode().IsRegular() {
+			if err == nil && stat.Mode().IsRegular() {
 				candidates = append(candidates, file)
 			}
 		}
