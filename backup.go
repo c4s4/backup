@@ -9,9 +9,11 @@ import (
 	"os/user"
 	"path"
 	"path/filepath"
+	"github.com/udhos/equalfile"
 )
 
 var quiet bool
+var compare = equalfile.New(nil, equalfile.Options{})
 
 // Configuration is a map that gives configuration for given host
 type Configuration map[string]HostConfiguration
@@ -72,7 +74,7 @@ func ShouldCopy(source, dest string) (bool, error) {
 		return true, nil
 	}
 	// compare files
-	equal, err := CompareFiles(source, dest)
+	equal, err := compare.CompareFile(source, dest)
 	if err != nil {
 		return false, err
 	}
