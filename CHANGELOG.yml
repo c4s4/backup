@@ -1,4 +1,8 @@
-# Semantic Change Log
+# Semantic ChangeLog (http://github.com/c4s4/changelog)
+
+- version: 0.2.0
+  date:    2017-08-08
+  summary: Using github.com/udhos/equalfile library
 
 - version: 0.1.0
   date:    2017-08-08
